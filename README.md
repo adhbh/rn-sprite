@@ -12,6 +12,26 @@ The process of changing images in quick succession to give the illusion of movem
 
 
 
+
+Code:
+
+```
+
+<Sprite
+  sequence =  { [0.04, 0.125, 0.20815, 0.2913, 0.37445, 0.4576, 0.54075, 0.6239, 0.70705, 0.7902, 0.87335, 0.9565, 0.04] }
+  move = { 'vertical' }
+  loop = { true }
+  fps = { 10 }
+  isPlaying = { true }
+  source = { 'http://assets.myntassets.com/assets/360images/1481063/FILA-Men-Navy-Epifanio-Sneakers-4881474692323372-1481063_360.jpg' }
+  width = { windowWidth }
+  height = { windowHeight/2 }
+  onTouchStart = { () => true }
+  onTouchMove = { () => true }
+  onTouchEnd = { () => true } />
+
+```
+
   - Depends on [gl-react-native][gl-rn]
   - Works on IOS and Android
   - Supports both [horizontal][h-sprite] and [vertical][v-sprite] spritesheets
@@ -35,6 +55,10 @@ The process of changing images in quick succession to give the illusion of movem
 - Animations in mobile games
 - Replacement for `gifs`
 - 360-View
+
+### Installation
+- Setup `RNGLPackage` by following [this][gl-rn] guide for Android and IOS 
+- `npm install --save rn-sprite`
 
 ### Todo
 - Configurable repeat count for animation
