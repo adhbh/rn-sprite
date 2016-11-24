@@ -8,7 +8,7 @@ A `sprite` is a single graphic image that is incorporated into a larger scene so
 When you put many sprites into a single image, you get a `spritesheet` like [this][h-sprite] and [this][v-sprite].
 The process of changing images in quick succession to give the illusion of movement is called `animation`.
 
-<img src="https://github.com/adhbh/rn-sprite/raw/master/demo1.gif" width="200"> <img src="https://github.com/adhbh/rn-sprite/raw/master/demo2.gif" width="200">
+<img src="https://github.com/adhbh/rn-sprite/raw/master/demo1.gif" width="500"> <img src="https://github.com/adhbh/rn-sprite/raw/master/demo2.gif" width="300">
 
 
 
