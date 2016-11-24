@@ -4,7 +4,7 @@ import { View, Image } from 'react-native'
 import { Surface } from 'gl-react-native'
 import Frame from './frame'
 
-export default class axial extends Component {
+export default class Sprite extends Component {
   constructor(props) {
     super (props)
     let { loop = false, move = 'horizontal', fps = 2, sequence } = this.props
