@@ -23,7 +23,7 @@ Code:
   loop = { true }
   fps = { 10 }
   isPlaying = { true }
-  source = { 'http://assets.myntassets.com/assets/360images/1481063/FILA-Men-Navy-Epifanio-Sneakers-4881474692323372-1481063_360.jpg' }
+  source = { 'https://github.com/adhbh/rn-sprite/raw/master/vertical.jpg' }
   width = { windowWidth }
   height = { windowHeight/2 }
   onTouchStart = { () => true }
