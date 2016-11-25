@@ -71,5 +71,5 @@ MIT
 
 
    [gl-rn]: <https://github.com/ProjectSeptemberInc/gl-react-native>
-   [v-sprite]: <http://assets.myntassets.com/assets/360images/1481063/FILA-Men-Navy-Epifanio-Sneakers-4881474692323372-1481063_360.jpg>
+   [v-sprite]: <https://github.com/adhbh/rn-sprite/blob/master/vertical.jpg>
    [h-sprite]: <https://cdn.codeandweb.com/blog/2014/11/05/animate-sprites-in-css-with-texturepacker/capguy-walk.png>
