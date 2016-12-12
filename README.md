@@ -47,6 +47,7 @@ Code:
 | **loop** | boolean | Repeat the animation when it completes (Default: `true`) | no |
 | **fps** | integer | Frames per second (Default: `2`) | no |
 | **isPlaying** | boolean | Play/Pause the animation (Default: `true`) | no |
+| **move** | string | For horizontal or vertical spritesheets (Default: `horizontal`) | no |
 | **onTouchStart** | function | Function which is called when sprite is touched | no |
 | **onTouchMove** | function | Function which is called while the user touches and moves the finger on the sprite | no |
 | **onTouchEnd** | function | Function which is called when touch event gets completed | no |
