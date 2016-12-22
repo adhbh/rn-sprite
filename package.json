@@ -5,7 +5,5 @@
   "dependencies": {
     "gl-react": "^2.2.8",
     "gl-react-native": "^2.36.0",
-    "react": "15.3.2",
-    "react-native": "0.37.0"
   }
 }
