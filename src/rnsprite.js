@@ -66,7 +66,7 @@ export default class Sprite extends Component {
     Image.getSize(this.props.source, (width, height) =>
       this.setState({
         imageSize: { width, height },
-        current: this.props.sequence[this.props.current || 0],
+        current: this.props.sequence[this.props.frames || 0],
         sequence: this.props.sequence,
       }))
   }
