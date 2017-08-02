@@ -66,7 +66,7 @@ export default class Sprite extends Component {
     Image.getSize(this.props.source, (width, height) =>
       this.setState({
         imageSize: { width, height },
-        current: this.props.sequence[0],
+        current: this.props.sequence[this.props.current || 0],
         sequence: this.props.sequence,
       }))
   }
@@ -140,13 +140,17 @@ export default class Sprite extends Component {
     const { imageSize } = this.state
     if (!imageSize) return <View />
 
+    let current = this.state.current;
+    if ( this.props.frames )
+      current = this.state.sequence[this.props.frames];
+
     this.position = [0, 0];
     if ( this.move === 'vertical' )
-      this.position[1] = this.state.current;
+      this.position[1] = current;
     else if ( this.move === 'horizontal' )
-      this.position[0] = this.state.current;
+      this.position[0] = current;
     else if ( this.move === 'grid' )
-      this.position = this.state.current;
+      this.position = current;
 
     return (
       <Surface
