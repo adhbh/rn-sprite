@@ -41,12 +41,22 @@ export default class Sprite extends Component {
   }
 
   componentWillMount () {
-    Image.getSize(this.props.source, (width, height) =>
+    // If we've passed in the size use that instead.
+    if ( this.props.sourceWidth && this.props.sourceHeight ) {
       this.setState({
-        imageSize: { width, height },
+        imageSize: { width: this.props.sourceWidth, height: this.props.sourceHeight },
         current: this.props.sequence[0],
         sequence: this.props.sequence,
-      }))
+      });
+    }
+    else {
+      Image.getSize(this.props.source, (width, height) =>
+        this.setState({
+          imageSize: { width, height },
+          current: this.props.sequence[this.props.frames || 0],
+          sequence: this.props.sequence,
+        }))
+    }
   }
 
   onTouchStart (evt) {
