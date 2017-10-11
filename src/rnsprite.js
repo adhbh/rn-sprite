@@ -141,7 +141,7 @@ export default class Sprite extends Component {
     if (!imageSize) return <View />
 
     let current = this.state.current;
-    if ( this.props.frames )
+    if ( this.props.frames !== null )
       current = this.state.sequence[this.props.frames];
 
     this.position = [0, 0];
