@@ -140,8 +140,9 @@ export default class Sprite extends Component {
     const { imageSize } = this.state
     if (!imageSize) return <View />
 
-    let current = this.state.current;
-    if ( this.props.frames !== null )
+    var current = this.state.current;
+
+    if (this.props.frames)
       current = this.state.sequence[this.props.frames];
 
     this.position = [0, 0];
@@ -161,6 +162,7 @@ export default class Sprite extends Component {
         onResponderMove={ this.onTouchMove }
         onResponderRelease={ this.onTouchEnd }
         onResponderTerminate={ this.onTouchEnd }
+        backgroundColor={"transparent"}
         { ...this.props } >
           <Frame source = { this.props.source }
           size = { imageSize }
