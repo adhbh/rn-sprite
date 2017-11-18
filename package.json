@@ -6,6 +6,12 @@
     "gl-react": "^2.2.8",
     "gl-react-native": "^2.36.0"
   },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android"
+  ],
   "repository" : { 
     "type" : "git",
     "url" : "https://github.com/adhbh/rn-sprite.git"
