@@ -25,6 +25,8 @@ export default GL.createComponent(({
     source,
     size,
     move,
+    rows,
+    cols,
     position,
   }) => {
     const { width: imageWidth, height: imageHeight } = size
@@ -56,8 +58,20 @@ export default GL.createComponent(({
       canvasSize[1],
     ]
 
-    rectangle[0] = move === 'horizontal' ? rectangle[0] : Math.max(0, Math.min(rectangle[0], imageWidth - canvasSize[0]))
-    rectangle[1] = move === 'vertical' ? rectangle[1] : Math.max(0, Math.min(rectangle[1], imageHeight - canvasSize[1]))
+    if ( move === 'horizontal' ) {
+      rectangle[1] = Math.max(0, Math.min(rectangle[1], imageHeight - canvasSize[1]))
+    }
+    else if ( move === 'vertical' ) {
+      rectangle[0] = Math.max(0, Math.min(rectangle[0], imageWidth - canvasSize[0]))
+    }
+    else if ( move === 'grid' ) {
+      rectangle = [
+        imageWidth * position[0] - imageWidth / (cols*2),
+        imageHeight * position[1] - imageHeight / (rows*2),
+        imageWidth / cols,
+        imageHeight / rows,
+      ]
+    }
 
     let crop = [
       rectangle[0] / imageWidth,

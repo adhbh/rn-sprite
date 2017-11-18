@@ -34,7 +34,7 @@ Code:
 
   - Depends on [gl-react-native][gl-rn]
   - Works on IOS and Android
-  - Supports both [horizontal][h-sprite] and [vertical][v-sprite] spritesheets
+  - Supports [horizontal][h-sprite], [vertical][v-sprite] and grid spritesheets
   - Play/Pause support
   - Configurable animation speed
   - Touch responsive
@@ -43,7 +43,7 @@ Code:
 | prop | type | description | required |
 |------|------|-------------|----------|
 | **source** | string | Url of spritesheet image | yes |
-| **sequence** | array | Array of numbers between 0 and 1 that define the sequence of animation | yes |
+| **sequence** | array | Array of numbers between 0 and 1 that define the sequence of animation, or, in the case of a sprite grid, an array of pairs of numbers between 0 and 1| yes |
 | **loop** | boolean | Repeat the animation when it completes (Default: `true`) | no |
 | **fps** | integer | Frames per second (Default: `2`) | no |
 | **isPlaying** | boolean | Play/Pause the animation (Default: `true`) | no |
@@ -58,7 +58,7 @@ Code:
 - 360-View
 
 ### Installation
-- Setup `RNGLPackage` by following [this][gl-rn] guide for Android and IOS 
+- Setup `RNGLPackage` by following [this][gl-rn] guide for Android and IOS
 - `npm install --save rn-sprite`
 
 ### Todo
