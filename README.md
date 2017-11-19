@@ -15,21 +15,25 @@ The process of changing images in quick succession to give the illusion of movem
 
 Code:
 
-```
-
+```js
 <Sprite
-  sequence =  { [0.04, 0.125, 0.20815, 0.2913, 0.37445, 0.4576, 0.54075, 0.6239, 0.70705, 0.7902, 0.87335, 0.9565, 0.04] }
-  move = { 'vertical' }
-  loop = { true }
-  fps = { 10 }
-  isPlaying = { true }
-  source = { 'https://github.com/adhbh/rn-sprite/raw/master/vertical.jpg' }
-  width = { windowWidth }
-  height = { windowHeight/2 }
-  onTouchStart = { () => true }
-  onTouchMove = { () => true }
-  onTouchEnd = { () => true } />
-
+	sequence={[ 
+			0.04, 
+			0.125, 0.20815, 0.2913, 0.37445, 0.4576, 
+			0.54075, 0.6239, 0.70705, 0.7902, 0.87335, 0.9565,
+			0.04,
+	]}
+	move="vertical"
+	loop
+	fps={10}
+	isPlaying
+	source="https://github.com/adhbh/rn-sprite/raw/master/vertical.jpg"
+	width={windowWidth}
+	height={windowHeight / 2}
+	onTouchStart={() => true}
+	onTouchMove={() => true}
+	onTouchEnd={() => true}
+/>
 ```
 
   - Depends on [gl-react-native][gl-rn]
